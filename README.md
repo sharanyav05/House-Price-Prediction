@@ -1,84 +1,153 @@
 # 🏠 House Price Prediction using Machine Learning
 
-A Machine Learning project that predicts house prices based on property features such as area, number of bedrooms, bathrooms, stories, parking spaces, and furnishing status. The project covers data preprocessing, exploratory data analysis (EDA), feature engineering, model building, and evaluation.
+## 📌 Project Overview
+
+This project aims to predict house prices based on various property features using Machine Learning techniques. The workflow includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, evaluation, and prediction of house prices.
+
+The project compares multiple regression algorithms and identifies the best-performing model based on evaluation metrics.
 
 ---
 
-## 📌 Project Overview
+## 🎯 Objectives
 
-- **Type:** Regression Problem
-- **Dataset:** [Housing.csv](https://www.kaggle.com/datasets/yasserh/housing-prices-dataset) (Kaggle) — 545 rows, 13 columns
-- **Target Variable:** `price`
-- **Models Compared:** Linear Regression, Decision Tree Regressor, Random Forest Regressor
+- Analyze housing data to identify key price-driving factors.
+- Perform data cleaning and preprocessing.
+- Explore relationships between features through visualization.
+- Train and compare multiple regression models.
+- Predict the selling price of a new house.
 
-## 📂 Repository Structure
+---
+
+## 📂 Dataset
+
+The dataset contains information about residential properties, including:
+
+- Area
+- Number of Bedrooms
+- Number of Bathrooms
+- Stories
+- Main Road Access
+- Guest Room
+- Basement
+- Hot Water Heating
+- Air Conditioning
+- Parking
+- Preferred Area
+- Furnishing Status
+- House Price (Target Variable)
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
+
+---
+
+## 🔄 Project Workflow
+
+1. Data Loading
+2. Data Cleaning
+3. Exploratory Data Analysis (EDA)
+4. Feature Encoding
+5. Train-Test Split
+6. Model Training
+7. Model Evaluation
+8. House Price Prediction
+
+---
+
+## 🤖 Machine Learning Models
+
+The following regression models were implemented and compared:
+
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+
+---
+
+## 📊 Model Evaluation Metrics
+
+The models were evaluated using:
+
+- R² Score
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+
+The best-performing model was selected based on these evaluation metrics.
+
+---
+
+## 📈 Visualizations
+
+The project includes several visualizations such as:
+
+- Correlation Heatmap
+- Price Distribution
+- Feature Relationships
+- Actual vs Predicted Prices
+- Residual Plot
+- Feature Importance
+- Model Performance Comparison
+
+---
+
+## 🏡 Example Prediction
+
+An example house with custom features is provided to demonstrate how the trained machine learning model predicts the estimated selling price.
+
+---
+
+## 📁 Project Structure
 
 ```
+House-Price-Prediction/
+│
+├── data/
+│   ├── Housing.csv
+│   └── Housing_cleaned.csv
+│
+├── images/
+│   ├── correlation_heatmap.png
+│   ├── price_distribution.png
+│   ├── actual_vs_predicted.png
+│   ├── residual_plot.png
+│   ├── feature_importance.png
+│   └── model_comparison.png
+│
+├── House_Price_Prediction.ipynb
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
 
+---
 
-## 🗺️ Roadmap / Phases
+## 🚀 Future Improvements
 
-| Phase | Description |
-|---|---|
-| 1 | Problem Understanding |
-| 2 | Dataset Collection & Understanding |
-| 3 | Data Cleaning & Preprocessing |
-| 4 | Exploratory Data Analysis (EDA) |
-| 5 | Feature Engineering |
-| 6 | Model Building |
-| 7 | Model Evaluation |
-| 8 | Conclusion & Future Scope |
+- Hyperparameter Tuning
+- Cross Validation
+- XGBoost & Gradient Boosting Models
+- Model Deployment using Streamlit or Flask
+- Real-Time House Price Prediction Web Application
 
-## 📊 Dataset Features
+---
 
-| Feature | Description |
-|---|---|
-| area | Plot/house area in sq. ft. |
-| bedrooms | Number of bedrooms |
-| bathrooms | Number of bathrooms |
-| stories | Number of floors |
-| mainroad | On main road (yes/no) |
-| guestroom | Has guest room (yes/no) |
-| basement | Has basement (yes/no) |
-| hotwaterheating | Has hot water heating (yes/no) |
-| airconditioning | Has AC (yes/no) |
-| parking | Number of parking spots |
-| prefarea | In preferred area (yes/no) |
-| furnishingstatus | furnished / semi-furnished / unfurnished |
+## 📬 Author
 
-## 🔍 Exploratory Data Analysis
+**Sharanya Vashisht**
 
-The `charts/` folder contains 9 EDA visualizations:
-1. Price distribution histogram
-2. Price outliers box plot
-3. Correlation heatmap
-4. Area vs Price scatter plot
-5. Bedrooms vs Price scatter plot
-6. Furnishing status count plot
-7. Main road access count plot
-8. Pair plot of key numeric features
-9. Average price by furnishing status bar chart
+B.Tech (Artificial Intelligence & Machine Learning)
 
-## 🤖 Model Performance
+---
 
-| Model | MAE | RMSE | R² Score |
-|---|---|---|---|
-| **Linear Regression** | 970,043 | 1,324,507 | **0.653** |
-| Random Forest Regressor | 1,022,545 | 1,403,779 | 0.610 |
-| Decision Tree Regressor | 1,226,190 | 1,610,551 | 0.487 |
-
-**Linear Regression performed best.** With a dataset of this size (~545 rows) and fairly linear feature-price relationships, the simpler model generalized better than the tree-based models.
-
-**Top price drivers (Linear Regression coefficients):** bathrooms, air conditioning, hot water heating, and preferred area location.
-
-## 🔮 Future Scope
-
-- Use a larger dataset for more reliable predictions
-- Add location-based features (city/locality, distance to city center, amenities)
-- Try advanced models (XGBoost, Gradient Boosting) with hyperparameter tuning
-- Build a web app (Streamlit/Flask) for live price prediction
-- Deploy the model as an API
-
-## 📄 License
+⭐ If you found this project useful, consider giving it a star!
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
