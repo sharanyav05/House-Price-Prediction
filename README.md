@@ -143,8 +143,9 @@ House-Price-Prediction/
 ## 📬 Author
 
 **Sharanya Vashisht**
-
 B.Tech (Artificial Intelligence & Machine Learning)
+📌 CodTech AI Internship Project 
+Intern ID - CITS5312 
 
 ---
 
